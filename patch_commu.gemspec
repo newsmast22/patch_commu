@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 7.0"
   spec.add_dependency "byebug"
+  spec.add_dependency "strong_migrations"
 end
