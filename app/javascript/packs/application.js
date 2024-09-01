@@ -1,0 +1,1 @@
+import 'mastodon/features/ui/util/async-components';

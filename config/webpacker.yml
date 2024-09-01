@@ -1,0 +1,24 @@
+# my_engine/config/webpacker.yml
+default: &default
+  source_path: app/javascript
+  source_entry_path: packs
+  public_root_path: ../public
+  # use a different sub-folder name
+  public_output_path: my-engine-pack
+  #public_root_path: public # default value
+  #public_output_path: packs # default value
+  cache_path: tmp/cache/webpacker
+  
+
+development:
+  <<: *default
+  compile: true
+  dev_server:
+    env_prefix: "XYZ_ENGINE_WEBPACKER_DEV_SERVER"
+    host: localhost
+    port: 3038
+    public: localhost:3038
+
+production:
+  <<: *default
+  compile: false
