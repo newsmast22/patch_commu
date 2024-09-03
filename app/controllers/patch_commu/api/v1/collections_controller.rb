@@ -17,7 +17,7 @@ module PatchCommu::Api::V1
     private 
 
     def set_collection
-      @collection = PatchCommu::Collection.find_by(slug: params[:slug])
+      @collection = PatchCommu::Collection.find_by(slug: params[:id])
     end
 
   end

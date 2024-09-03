@@ -7,7 +7,9 @@ class PatchCommu::Community < ApplicationRecord
   has_many :joined_communities, class_name: 'PatchCommu::JoinedCommunity', foreign_key: 'patchwork_community_id', dependent: :destroy
   has_many :community_hashtags, class_name: 'PatchCommu::CommunityHashtags', foreign_key: 'patchwork_community_id', dependent: :destroy
   has_many :community_admins, class_name: 'PatchCommu::CommunityAdmin', foreign_key: 'patchwork_community_id', dependent: :destroy
-
+  has_one_attached :banner_image
+  has_one_attached :avatar_image
+  
   validates :name, presence: true, uniqueness: true
   validates :description, length: { maximum: 500 }
 end

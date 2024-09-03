@@ -4,6 +4,7 @@ PatchCommu::Engine.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resources :collections, only: [:index, :show]
+      resources :communities, only: [:index, :show]
     end
   end
 end
